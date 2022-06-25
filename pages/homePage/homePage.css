@@ -1,0 +1,67 @@
+h1, h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#halfTop {
+    background-color: #D6EEF0;
+    height: 50vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    position: relative;
+
+}
+
+#halfBottom {
+    background-color: #42ADE2;
+    height: 50vh;
+    width: 100vw;
+    z-index: 0;
+    color: white;
+    font-size: 50px;
+}
+
+#island {
+    position: absolute;
+    width: 100vw;
+    left: 0px;
+    bottom: -100px;
+    z-index: 1;
+}
+
+#clouds {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: 1;
+}
+
+#sun {
+    position: absolute;
+    padding: 0;
+    top: 5%;
+    right: 5%;
+    height: 250px;
+    width: 250px;
+    background-color: #FFE62E;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0px 0px 40px 10px #EE7D7D40;
+
+}
+
+#halfTop h1 {
+    position: absolute;
+    bottom: 0;
+    font-size: 50px;
+    width: 100%;    
+}
+#halfTop h2 {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;    
+}
