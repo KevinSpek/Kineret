@@ -1,4 +1,4 @@
-var dataTime = d3.range(0, 53).map(function(d) {
+var dataTime = d3.range(0, 52).map(function(d) {
   return new Date(1970 + d, 10, 3);
 });
 
@@ -19,6 +19,8 @@ var sliderTime = d3
   .fill("#8381F5")
   .on('onchange', val => {
     d3.select('p#value-time').text(d3.timeFormat('%Y')(val));
+    d3.select("#graph").select("svg").remove()
+    create_graph();
   });
 
 var gTime = d3
@@ -26,6 +28,7 @@ var gTime = d3
   .append('svg')
   .attr('width', $(window).width()*0.6)
   .attr('height', 100)
+
   .append('g')
   .attr('transform', 'translate(30,30)');
 
