@@ -1,23 +1,4 @@
 const margin = {top: 20, right: 60, bottom: 30, left: 60};
-var all_data = {};
-
-read_data = function() {
-
-    d3.csv("data/kineret.csv",
-    
-    function(d){
-        if (!(d.year in all_data)) {
-            all_data[d.year] = []
-        }
-        all_data[d.year].push({
-            month: d3.timeParse("%Y-%m-%d")(d.year.toString() + "-" + d.month + "-01"),
-            water_level: Number(d.Kinneret_Level),
-            rain_level: Number(d.Rain_Amount),
-        })
-    })
-}
-
-read_data()
 
 create_graph = function() {
 
@@ -69,7 +50,7 @@ create_graph = function() {
           .attr("width", 30)
           .attr("height", d => currHeight - yRight(d.rain_level))
           .attr("fill", "#1F88F833")
-    
+
     graph.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -79,8 +60,25 @@ create_graph = function() {
         .attr("d", d3.line()
             .x(function(d) { return x(d.month) })
             .y(function(d) { return yLeft(d.water_level) }))
-    }
 
+        graph.selectAll('circle_samp')
+            .data(data)
+            .enter()
+            .append('circle')
+            .attr('cx', (d) => x(d.month))
+            .attr('cy', (d) => yLeft(d.water_level))
+            .attr("transform", `translate(${margin.left/2}, 0)`)
+            .attr('r', 6)
+            .attr('fill', '#1F88F8')
+            .attr('class', 'points')
+            .style('pointer-events', 'all')
+            .append('title')
+            .text(function (d) {
+               return (
+               'Water Level: ' + d.water_level + '\n' + 'Rain Amount ' + d.rain_level
+               );
+            });
+    }
 
 function sleep (time) {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -96,9 +94,7 @@ function sleep (time) {
 function resizedw(){
     // Haven't resized in 100ms!
     d3.select("#graph").select("svg").remove()
-    const graph = d3.select("#graph")
-    currWidth = graph.node().getBoundingClientRect().width - margin.left - margin.right;
-    createGraph()
+    create_graph()
 
 }
 
@@ -108,10 +104,3 @@ window.onresize = function(){
   doit = setTimeout(resizedw, 300);
 };
 
-
-d3.select('p#value-time')
-.on('onchange', val => {
-    console.log("Hello!")
-    d3.select("#graph").select("svg").remove()
-    create_graph();
-  });

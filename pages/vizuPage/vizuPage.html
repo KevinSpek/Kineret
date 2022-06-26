@@ -6,29 +6,34 @@
         $('#vizu').append('<link rel="stylesheet" href="./pages/vizuPage/vizuPage.css" type="text/css" />');
     </script>
     <script src="./pages/vizuPage/constants.js"></script>
+    <script src="./pages/vizuPage/read_data.js"></script>
     <script src="./pages/vizuPage/slider.js"></script>
     <script src="./pages/vizuPage/graph.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div id="vizu">
-        <div id="topSlider">
-            <div class="row align-items-center">
-                <div class="col-sm-2"><p id="value-time"></p></div>
-                <div class="col-sm"><div id="slider-time"></div></div>
-              </div>
-        </div>
-
+      
         <div id="maps">
+            <img src ="../../assets/kineret.svg" alt="My Happy SVG" id="kineretMapLeft"/>
+            <img src ="../../assets/kineret.svg" alt="My Happy SVG" id="kineretMapRight"/>
+            <div id="labeldiv">
+                <div id="leftMapLabel"><p>Rain Amount</p></div>
+                <div id="rightMapLabel"><p>Water Level</p></div>
+            </div>
 
         </div>
 
         <div id="graph">
 
         </div>
-        
-        
-          
+
+        <div id="topSlider">
+            
+            <div class="col-sm-2"><p id="value-time"></p></div>
+            <div class="col-sm"><div id="slider-time"></div></div>
+            
+        </div>
 
 
     </div>

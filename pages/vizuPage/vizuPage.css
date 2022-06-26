@@ -1,7 +1,7 @@
 #vizu {
     background: linear-gradient(180deg, #FFDD7D 0%, rgba(255, 224, 125, 0.68) 100%);
     width: 100vw;
-    height: 120vh;
+    height: 140vh;
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -16,9 +16,9 @@
     display: flex;
     justify-content: center;
     
-  }
+  } 
 
-  .parameter-value path{
+.parameter-value path{
     fill:#7D54F0;
     stroke:white;
     stroke-width:1.5px;
@@ -31,15 +31,28 @@
 
 
 #maps {
+    position: relative;
     background-color: #FFF7E1;
     width: 80%;
     height: 500px;
     margin: 20px;
     box-shadow: -8px 8px 4px 0px #DDD4B6CC;
     border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: visible;
 
+}
+#labeldiv {
+    overflow: hidden;
+
+}
+
+#labeldiv p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
     
-
 }
 
 #graph {
@@ -50,4 +63,56 @@
     box-shadow: -8px 8px 4px 0px #DDD4B6CC;
     border-radius: 10px;
 
+}
+
+.points {
+    opacity: 0.4;
+    }
+
+.points:hover {
+    opacity: 1;
+    box-shadow: 0px 0px 10px 2px #1F88F880;
+
+
+}
+
+
+#kineretMapRight {
+    margin: 70px;
+    height: 400px;
+    
+}
+
+#kineretMapLeft {
+    margin: 70px;
+    height: 400px;
+    transform: scaleX(-1);
+    
+}
+
+#leftMapLabel {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    width: 144px;
+    height: 72px;
+    background-color: #8381F5;
+    box-shadow: -8px 8px 4px 0px #DDD4B6CC;
+    border-radius: 10px;
+ 
+}
+
+
+#rightMapLabel {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 144px;
+    height: 72px;
+    background-color: #8381F5;
+    box-shadow: -8px 8px 4px 0px #DDD4B6CC;
+    border-radius: 10px;
+
+    
+    
 }

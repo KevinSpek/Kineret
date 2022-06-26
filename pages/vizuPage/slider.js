@@ -1,5 +1,5 @@
-var dataTime = d3.range(0, 52).map(function(d) {
-  return new Date(1970 + d, 10, 3);
+var dataTime = d3.range(0, 44).map(function(d) {
+  return new Date(1978 + d, 10, 3);
 });
 
 var sliderTime = d3
@@ -9,7 +9,7 @@ var sliderTime = d3
   .step(1000 * 60 * 60 * 24 * 365)
   .width($(window).width()*0.5)
   .ticks(0)
-  .default(new Date(1980, 10, 3))
+  .default(new Date(1990, 10, 3))
   .displayValue(false)
   .handle(
       d3.symbol()
