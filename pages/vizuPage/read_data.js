@@ -1,4 +1,6 @@
 var all_data = {};
+var year_data = [];
+
 var min_water_level = 0
 var max_water_level = -1000
 
@@ -21,4 +23,27 @@ function(d){
         water_level: Number(d.Kinneret_Level),
         rain_level: Number(d.Rain_Amount),
     })
-})
+}).then(
+    function(d) {
+        for (const [year, data] of Object.entries(all_data)) {
+            max_water_level = 0
+            var total_rain = 0
+            data.forEach(function (d, index) {
+                if (d.water_level < max_water_level) {
+                    max_water_level = d.water_level
+                }
+                total_rain += d.rain_level
+                
+              });
+            year_data.push({
+                year: year,
+                water_level: max_water_level,
+                rain_level: total_rain
+            })
+          }
+          console.log(year_data)
+        
+    }
+   
+)
+

@@ -24,15 +24,33 @@
             <div style="align-items: center" id="mapRightContainer">
                 
                 <img src ="../../assets/kineret.svg" alt="My Happy SVG" class="kineretMapRight"/>
-                
                 <img src ="../../assets/kineret_filled.svg" alt="My Happy SVG" class="kineretMapRight" id="kineretColorRight"/>
+                <!-- <img src ="../../assets/kineret_ontop.svg" alt="My Happy SVG" class="kineretMapRight" id="boxMapRight"/> -->
+
                 <div id="boxMapRight"></div>
+                <div id="boxRedTopLine"></div>
+                <div id="boxRedBottomLine"></div>
+                <div id="KineretRedBottomLine">
+                    <p>Red Line</p>
+                    <p>-213</p>
+                </div>
+                <div id="kineretRedTopLine">
+                    <p>Green Line</p>
+                    <p>-208.8</p>
+                </div>
             </div>
 
             <div id="labeldiv">
                 <div id="leftMapLabel"><p>Rain Amount</p></div>
                 <div id="rightMapLabel"><p>Water Level</p></div>
+                <div id="centerMapLabel">
+                    <p id="title" style="font-weight: bold; font-size: 24px">Welcome</p>
+                    <p id="waterLevel"></p>
+                    <p id="rainLevel"></p>
+                </div>
+                
             </div>
+
 
         </div>
 
@@ -44,7 +62,12 @@
             
             <div class="col-sm-2"><p id="value-time"></p></div>
             <div class="col-sm"><div id="slider-time"></div></div>
-            
+        </div>
+
+        <div id="choose">
+            <p>Months</p>
+            <input type="checkbox" id="switch" onclick="switchType()"/><label for="switch">Toggle</label>
+            <p>Years</p>
         </div>
 
 

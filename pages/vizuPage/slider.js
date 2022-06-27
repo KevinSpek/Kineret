@@ -19,8 +19,8 @@ var sliderTime = d3
   .fill("#8381F5")
   .on('onchange', val => {
     d3.select('p#value-time').text(d3.timeFormat('%Y')(val));
-    d3.select("#graph").select("svg").remove()
-    create_graph();
+    d3.select("#graph").selectAll("svg").remove()
+    create_graph_months();
   });
 
 var gTime = d3

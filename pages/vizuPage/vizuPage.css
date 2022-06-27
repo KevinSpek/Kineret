@@ -12,6 +12,7 @@
 
 
 #topSlider {
+    position: relative;
     padding-top: 50px;
     display: flex;
     justify-content: center;
@@ -75,6 +76,14 @@
 
 }
 
+.rectSelect {
+    opacity: 0;
+}
+
+.rectSelect:hover {
+    opacity: 0.5;
+}
+
 #mapRightContainer {
     position: relative;
     height: 100%;
@@ -89,8 +98,7 @@
     height: 400px;
     z-index: 3;
     position: absolute;
- 
-    
+  
 }
 
 #kineretColorRight {
@@ -135,7 +143,7 @@
 }
 
 #boxMapLeft {
-    width: 50%;
+    width: 50%; 
     height: 100px;
     background-color:#FFF7E1;
     z-index: 2;
@@ -168,3 +176,158 @@
     border-radius: 10px;
 
 }
+
+#centerMapLabel {
+    position: absolute;
+    width: 248px;
+    height: 124px;
+    background-color: #8381F5;
+    box-shadow: -8px 8px 4px 0px #DDD4B6CC;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -36px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#centerMapLabel p {
+    margin: 0px;
+    padding: 4px;
+    text-align: center;
+}
+
+#kineretRedTopLine {
+    position: absolute;
+    width: 144px;
+    height: 72px;
+
+}
+
+#kineretRedTopLine {
+    position: absolute;
+    width: 200px;
+    height: 72px;
+    right:0;
+    top: 88.857px;
+    z-index: 4;
+    overflow: visible;
+
+
+}
+
+#kineretRedTopLine p {
+    color: green;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+    padding: 2px;
+
+}
+
+#boxRedTopLine {
+    position: absolute;
+    background-color: green;
+    height: 3px;
+    width: 20%;
+    z-index: 0;
+    right:0;
+    top: 108.857px;
+
+}
+
+#boxRedBottomLine {
+    position: absolute;
+    background-color: red;
+    height: 3px;
+    width: 20%;
+    z-index: 0;
+    right:0;
+    top: 325.428px;
+
+}
+
+#KineretRedBottomLine {
+    position: absolute;
+    width: 200px;
+    height: 72px;
+    right:0;
+    top: 305.428px;
+    z-index: 4;
+    overflow: visible;
+}
+
+#KineretRedBottomLine p {
+    color: red;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+    padding: 2px;
+}
+
+#value-time {
+    position: absolute;
+
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 48px;
+    background: #8381F5;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 36px;
+    transition: 0.3s;
+  }
+  
+  input:checked + label {
+    background: #27BFB6;
+  }
+  
+  input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  label:active:after {
+    width: 130px;
+  }
+  
+  
+
+  #choose {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #choose p {
+      margin: 16px;
+  }
