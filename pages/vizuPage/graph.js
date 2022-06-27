@@ -274,8 +274,15 @@ function sleep (time) {
 
 function resizedw(){
     // Haven't resized in 100ms!
-    d3.select("#graph").select("svg").remove()
-    create_graph_months()
+    visible = d3.select("#topSlider").style("visibility")
+    if (visible == "visible") {
+        d3.select("#graph").selectAll("svg").remove()
+        create_graph_months()
+
+    } else {
+        d3.select("#graph").selectAll("svg").remove()
+        create_graph_years()
+    }
 
 }
 
