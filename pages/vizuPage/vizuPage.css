@@ -40,7 +40,6 @@
     border-radius: 10px;
     display: flex;
     justify-content: space-evenly;
-    overflow: visible;
 
 }
 #labeldiv {
@@ -76,19 +75,74 @@
 
 }
 
+#mapRightContainer {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+}
 
-#kineretMapRight {
+.kineretMapRight {
     margin: 70px;
     height: 400px;
+    z-index: 3;
+    position: absolute;
+ 
     
 }
 
-#kineretMapLeft {
+#kineretColorRight {
+    z-index: 1;
+    position: absolute;
+    
+}
+
+#boxMapRight {
+    width: 50%;
+    height: 150px;
+    background-color:#FFF7E1;
+    z-index: 2;
+    position: absolute;
+    top: 60px;
+}
+
+#mapLeftContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    z-index: 4;
+}
+
+.kineretMapLeft {
+    position: absolute;
     margin: 70px;
     height: 400px;
+
+    transform: scaleX(-1);
+    z-index: 3;
+    
+}
+
+#kineretColorLeft {
+    z-index: 1;
+    position: absolute;
     transform: scaleX(-1);
     
 }
+
+#boxMapLeft {
+    width: 50%;
+    height: 100px;
+    background-color:#FFF7E1;
+    z-index: 2;
+    position: absolute;
+    top: 60px;
+}
+
 
 #leftMapLabel {
     position: absolute;
@@ -113,6 +167,4 @@
     box-shadow: -8px 8px 4px 0px #DDD4B6CC;
     border-radius: 10px;
 
-    
-    
 }

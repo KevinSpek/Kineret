@@ -15,8 +15,20 @@
     <div id="vizu">
       
         <div id="maps">
-            <img src ="../../assets/kineret.svg" alt="My Happy SVG" id="kineretMapLeft"/>
-            <img src ="../../assets/kineret.svg" alt="My Happy SVG" id="kineretMapRight"/>
+            <div style="align-items: center" id="mapLeftContainer">
+                <img src ="../../assets/kineret.svg" alt="My Happy SVG" class="kineretMapLeft"/>
+                <div id="boxMapLeft"></div>
+                <img src ="../../assets/kineret_filled.svg" alt="My Happy SVG" class="kineretMapLeft" id="kineretColorLeft"/>
+       
+            </div>
+            <div style="align-items: center" id="mapRightContainer">
+                
+                <img src ="../../assets/kineret.svg" alt="My Happy SVG" class="kineretMapRight"/>
+                
+                <img src ="../../assets/kineret_filled.svg" alt="My Happy SVG" class="kineretMapRight" id="kineretColorRight"/>
+                <div id="boxMapRight"></div>
+            </div>
+
             <div id="labeldiv">
                 <div id="leftMapLabel"><p>Rain Amount</p></div>
                 <div id="rightMapLabel"><p>Water Level</p></div>
