@@ -1,7 +1,7 @@
 #vizu {
     background: linear-gradient(180deg, #FFDD7D 0%, rgba(255, 224, 125, 0.68) 100%);
     width: 100vw;
-    height: 1800px;
+    height: 1900px;
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -134,7 +134,7 @@
     z-index: 4;
 }
 
-.kineretMapRight {
+.kinneretMapRight {
     margin: 70px;
     height: 400px;
     z-index: 3;
@@ -142,7 +142,7 @@
   
 }
 
-#kineretColorRight {
+#kinneretColorRight {
     z-index: 1;
     position: absolute;
     
@@ -166,7 +166,7 @@
     z-index: 4;
 }
 
-.kineretMapLeft {
+.kinneretMapLeft {
     position: absolute;
     margin: 70px;
     height: 400px;
@@ -176,7 +176,7 @@
     
 }
 
-#kineretColorLeft {
+#kinneretColorLeft {
     z-index: 1;
     position: absolute;
     transform: scaleX(-1);
@@ -243,14 +243,14 @@
     text-align: center;
 }
 
-#kineretRedTopLine {
+#kinneretRedTopLine {
     position: absolute;
     width: 144px;
     height: 72px;
 
 }
 
-#kineretRedTopLine {
+#kinneretRedTopLine {
     position: absolute;
     width: 200px;
     height: 72px;
@@ -262,7 +262,7 @@
 
 }
 
-#kineretRedTopLine p {
+#kinneretRedTopLine p {
     color: green;
     font-size: 16px;
     padding: 0px;
@@ -294,7 +294,7 @@
 
 }
 
-#KineretRedBottomLine {
+#KinneretRedBottomLine {
     position: absolute;
     width: 200px;
     height: 72px;
@@ -304,7 +304,7 @@
     overflow: visible;
 }
 
-#KineretRedBottomLine p {
+#KinneretRedBottomLine p {
     color: red;
     font-size: 16px;
     padding: 0px;

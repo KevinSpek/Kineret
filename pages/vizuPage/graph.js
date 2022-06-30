@@ -117,7 +117,7 @@ create_graph_months = function() {
         d3.select("#boxMapRight").style("height", water_height + "px")
         d3.select("#centerMapLabel #title").text(d.month.toLocaleString('default', { month: 'long' }))
         d3.select("#centerMapLabel #waterLevel").text("Water Level: " + d.water_level.toFixed(1))
-        d3.select("#centerMapLabel #rainLevel").text("Rain Level: " + d.rain_level.toFixed(1))
+        d3.select("#centerMapLabel #rainLevel").text("Rain Amount: " + d.rain_level.toFixed(1))
         currMonth = d.month.getMonth();
 
     }
@@ -139,7 +139,7 @@ create_graph_months = function() {
     
       })
     updateMapsMonths(data[currMonth])
-    d3.select("#graph #leftAxisLabel p").text("Rain\nLevel")
+    d3.select("#graph #leftAxisLabel p").text("Rain\nAmount")
     d3.select("#graph #rightAxisLabel p").text("Water\nLevel")
 
 

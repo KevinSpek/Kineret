@@ -4,7 +4,7 @@ var year_data = [];
 var min_water_level = 0
 var max_water_level = -1000
 
-d3.csv("data/kineret.csv",
+d3.csv("data/kinneret.csv",
 
 function(d){
     if (!(d.year in all_data)) {
