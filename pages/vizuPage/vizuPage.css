@@ -1,7 +1,7 @@
 #vizu {
     background: linear-gradient(180deg, #FFDD7D 0%, rgba(255, 224, 125, 0.68) 100%);
     width: 100vw;
-    height: 140vh;
+    height: 1800px;
     font-size: 50px;
     display: flex;
     justify-content: center;
@@ -10,12 +10,15 @@
 
 }
 
+.axis { 
+    font-size: 14px; 
+}
 
 #topSlider {
-    position: relative;
-    padding-top: 50px;
+
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     
   } 
 
@@ -34,7 +37,7 @@
 #maps {
     position: relative;
     background-color: #FFF7E1;
-    width: 80%;
+    width: 70%;
     height: 500px;
     margin: 20px;
     box-shadow: -8px 8px 4px 0px #DDD4B6CC;
@@ -56,18 +59,56 @@
 }
 
 #graph {
+    position: relative;
     background-color: #FFF7E1;
-    width: 80%;
-    height: 250px;
+    width: 70%;
+    height: 300px;
     margin: 20px;
     box-shadow: -8px 8px 4px 0px #DDD4B6CC;
     border-radius: 10px;
 
+
+}
+
+#graph p {
+    font-size: 18px;
+}
+
+
+#leftAxisLabel {
+    position: absolute;
+    /* left: -15%; */
+    left: -170px;
+    top: 1%;
+    width: 144px;
+    height: 72px;
+    background-color: #8381F5;
+    box-shadow: -8px 8px 4px 0px #DDD4B6CC;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    
+}
+
+#rightAxisLabel {
+    position: absolute;
+    right: -170px;
+    /* right: -15%; */
+    top: 1%;
+    width: 144px;
+    height: 72px;
+    background-color: #8381F5;
+    box-shadow: -8px 8px 4px 0px #DDD4B6CC;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
 }
 
 .points {
     opacity: 0.4;
-    }
+}
 
 .points:hover {
     opacity: 1;
@@ -331,3 +372,34 @@ input[type=checkbox]{
   #choose p {
       margin: 16px;
   }
+
+
+  #legend {
+      position: absolute;
+      top: 50%;
+      right: -196px;
+      width: 172px;
+      height: 144px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: #FFF7E1;
+      box-shadow: -8px 8px 4px 0px #DDD4B6CC;
+      border-radius: 10px;
+  }
+
+  #legend div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 8px;
+  }
+
+
+#introText {
+    width: 70%;
+    
+}
+#introText p {
+    font-size: 24px;
+}

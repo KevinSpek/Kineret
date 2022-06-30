@@ -13,18 +13,31 @@
 </head>
 <body>
     <div id="vizu">
-      
+        <div id="introText">
+            <h5 style="text-align: center;">The Kinneret, Sea of Galilee, is in the northeast of Israel</h5>
+            <p>
+            The largest freshwater lake in Israel and the lowest in the world.
+            In the past, Kineret supplied about a quarter of Israel's water consumption, but due to the decline in water levels, it now supplies between 2 and 13 percent of total consumption.
+            <br/>
+            <br/>
+            <br/>
+            This visualization shows the amount of precipitation and the water level in each month since 1978. Also, by clicking on the switch, you can switch to an annual display of the maximum level in a selected year and the total amount of precipitation in that year.
+            <br/>
+            <br/>
+            <br/>
+            </p>
+        </div>
         <div id="maps">
             <div style="align-items: center" id="mapLeftContainer">
-                <img src ="../../assets/kineret.svg" alt="My Happy SVG" class="kineretMapLeft"/>
+                <img src ="../../assets/drop.svg" class="kineretMapLeft"/>
                 <div id="boxMapLeft"></div>
-                <img src ="../../assets/kineret_filled.svg" alt="My Happy SVG" class="kineretMapLeft" id="kineretColorLeft"/>
+                <img src ="../../assets/drop_filled.svg" class="kineretMapLeft" id="kineretColorLeft"/>
        
             </div>
             <div style="align-items: center" id="mapRightContainer">
                 
-                <img src ="../../assets/kineret.svg" alt="My Happy SVG" class="kineretMapRight"/>
-                <img src ="../../assets/kineret_filled.svg" alt="My Happy SVG" class="kineretMapRight" id="kineretColorRight"/>
+                <img src ="../../assets/kineret.svg" class="kineretMapRight"/>
+                <img src ="../../assets/kineret_filled.svg" class="kineretMapRight" id="kineretColorRight"/>
                 <!-- <img src ="../../assets/kineret_ontop.svg" alt="My Happy SVG" class="kineretMapRight" id="boxMapRight"/> -->
 
                 <div id="boxMapRight"></div>
@@ -55,13 +68,27 @@
         </div>
 
         <div id="graph">
+            <div id="leftAxisLabel"><p></p></div>
+            <div id="rightAxisLabel"><p></p></div>
+            <div id="legend">
+                <div id="legendWaterLevel">
+                    <img src ="../../assets/line_legend.svg" class="legendImage"/>
+                    <p>Water</p>
+                </div>
+                <div id="legendRainLevel">
+                    <img src ="../../assets/bar_legend.svg" class="legendImage"/>
+                    <p>Rain</p>
+                </div>
+               
+            </div>
 
         </div>
 
+
         <div id="topSlider">
             
-            <div class="col-sm-2"><p id="value-time"></p></div>
-            <div class="col-sm"><div id="slider-time"></div></div>
+            <div><p id="value-time"></p></div>
+            <div><div id="slider-time"></div></div>
         </div>
 
         <div id="choose">

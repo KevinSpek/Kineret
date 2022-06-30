@@ -1,3 +1,5 @@
+
+
 var dataTime = d3.range(0, 44).map(function(d) {
   return new Date(1978 + d, 10, 3);
 });
@@ -18,9 +20,13 @@ var sliderTime = d3
     )
   .fill("#8381F5")
   .on('onchange', val => {
-    d3.select('p#value-time').text(d3.timeFormat('%Y')(val));
-    d3.select("#graph").selectAll("svg").remove()
-    create_graph_months();
+
+    if (d3.select('p#value-time').text() != val.getFullYear()) {
+      d3.select('p#value-time').text(d3.timeFormat('%Y')(val));
+      d3.select("#graph").selectAll("svg").remove()
+      create_graph_months();
+    }
+    
   });
 
 var gTime = d3

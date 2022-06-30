@@ -25,6 +25,20 @@ function(d){
     })
 }).then(
     function(d) {
+
+
+        for (const [year, data] of Object.entries(all_data)) { 
+            all_data[year].sort(function(a, b) {
+                const keyA = a.month;
+                const keyB = b.month;
+                // Compare the 2 dates
+                if (keyA < keyB) return -1;
+                if (keyA > keyB) return 1;
+                return 0;
+            }); 
+        } 
+        
+
         for (const [year, data] of Object.entries(all_data)) {
             max_water_level = 0
             var total_rain = 0
@@ -41,9 +55,8 @@ function(d){
                 rain_level: total_rain
             })
           }
-          console.log(year_data)
-        
-    }
+        }
+    
    
 )
 
